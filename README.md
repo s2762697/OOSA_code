@@ -9,17 +9,20 @@ This library uses the raw Land, Vegetetaion and Ice Sensor (LVIS) data ([link](h
 │── Data2015/
 │── source/
 │   │── lvisClass.py
-│   │── processLVIS.pyV
+│   │── lvisTiff.py
+│   │── processLVIS.py
 │   │── handleTiff.py
 │── static/
-│   │── waveform.png
-│   │──
+│   │── task1_image.png
+│   │── task2_image.png
 │   │── 
 │── Outputs/
-│── ReadmeImages 
-│── Task1.py
-│── Task2.py
-│── Task3.py
+│── task1.py
+│── task2.py
+│── task3boundattempt.py
+│── task3folderloop.py
+│── task4.py?
+│── task5.py?
 │── README.md
 ```
 -	**Source:** Contains multiple files that are required to complete the specified tasks.
@@ -42,40 +45,43 @@ The follwowing libraries are required for the scripts to run:
 -	argparse: For handling command line options.
 -	Tracemalloc: For tracking memory during script use.
 
-To install:
+Incase any of the libraries need to be installed:
 ```
-    pip install GDAL numpy h5py matplotlib rasterio pyproj
+    pip install [library]
 ```
 -----------
 ### Running The Code:
 **Install the github repo**
 To clone the repository:
 ```
-    git clone etc...
+    git clone git@github.com:s2762697/OOSA_code.git
 ```
 **Task 1:**
 
 To run:
 ```
-    python task1.py -f '/geos/netdata/oosa/assignment/lvis/2009/ILVIS1B_AQ2009_1020_R1408_049700.h5' --i 24
+    python task1.py -f /geos/netdata/oosa/assignment/lvis/2009/ILVIS1B_AQ2009_1020_R1408_049700.h5 --i 24
 ```  
 1. This script reads the specifed file and creates a plot of _one waves'_ full LiDAR return data (amplitude). 
 2. If chosen index contains data, this saves the plot to the Output folder.
-3. pic of output?
+
+This will display the following output:
+
+![Alt text](static/task1_image.png)
 
 **Task 2:**
 
-change name to task2.py
-
 To run:
 ```
-    python task2final.py -f /geos/netdata/oosa/assignment/lvis/2009/ILVIS1B_AQ2009_1020_R1408_058456.h5 --res 30 --o 'Example.tif'
+    python task2.py -f /geos/netdata/oosa/assignment/lvis/2009/ILVIS1B_AQ2009_1020_R1408_058456.h5 --res 30 --o 'Example.tif'
 
 ```
 1. This script creates subset tiles and loops through (for one file) and converts the tiles into rasters of a chosen resolution.
-2. These rasters are stored in a folder (Data2009) and then merged into one TIF. file.
-3. 
-4.
+2. These rasters are stored in a folder (Data2009) and then merged into one TIF file.
+
+This will display the following output:
+
+![Alt text](static/task2_image.png)
 
   
 **Task 3:**
@@ -88,13 +94,3 @@ To run:
 ----------------
 References:!?
 
-
-There is an optional spatial subsetter for when dealing with large datasets.
-
-    lvis=lvisData(filename,minX=x0,minY=y0,maxX=x1,maxX=x1)
-
-Where (x0,y0) is the bottom left coordinate of the area of interest and (x1,y1) is the top right.
-
-To help choose the bounds, the bounds only can be read from the file, to save time and RAM:
-
-    lvisData(filename,onlyBounds=True)
