@@ -13,7 +13,15 @@ from task1 import chooseArg
 class plotLVIS(HandleTiff):
 
     def makeDEM(self, resolution, tiffName):
-        '''convert data to a goetiff (from tiffExample.py)'''
+        '''convert data to a geotiff 
+        
+        Args: 
+            resolution = chosen spatial resolution
+            tiffname = name of output file
+
+        Returns:
+            writes geotiff to file'''
+        
         writeTiff(self.zG, self.x, self.y, resolution, tiffName)
         return  
 
