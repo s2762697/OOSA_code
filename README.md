@@ -83,7 +83,7 @@ This will display the following output:
 
 ![Alt text](static/task2_image.png)
 
-  
+
 **Task 3:**
 
 **Task 4:**
