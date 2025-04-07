@@ -78,7 +78,7 @@ for i in range(subset_size):    # loop for x axis
             tile_number +=1   # loop counter
 
 # Outside loop
-print(f'Each geotiff is split into {subset_size} x {subset_size} tiles')
+print(f'Each array is split into {subset_size} x {subset_size} tiles')
 
 # merge the rasters and folder management
 tiles_dir2009 = 'Data2009'   # specify input dir
