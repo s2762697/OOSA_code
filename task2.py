@@ -29,7 +29,7 @@ command = chooseArg()
 
 filename = command.f
 
-# folder managment
+# folder management
 data_folder = 'Data2009'    # specify input dir
 os.makedirs(data_folder, exist_ok=True) # check folder exists and create if not
 
@@ -87,7 +87,6 @@ lvis.visualise_tiff(output_tiff, plot_name)
 try:
     shutil.rmtree('Data2009')
     print('Temporary files deleted sucessfully')
-    #os.rmdir(tiles_dir2009)
 except Exception as e:
     print(f'An arror occured: {e}')
 
@@ -95,4 +94,3 @@ except Exception as e:
 current, peak = tracemalloc.get_traced_memory() #both needed as returns a tuple
 peak_GB = peak/(1024**3)
 print(f'Peak memory used was: {peak_GB:.2f} GB')
-#print(current,peak)
