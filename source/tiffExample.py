@@ -34,7 +34,7 @@ def writeTiff(data,x,y,res,filename="lvis_image.tif",epsg=3031):
 
     # pack in to arrays
     imageArr=np.full((nY,nX),-999.0)
-    imageArr=np.full((nY,nX), 0)         # make an array of missing data flags 
+    #imageArr=np.full((nY,nX), 0)         # make an array of missing data flags 
 
     # calculate the raster pixel index in x and y
     xInds=np.array(np.floor((x-np.min(x))/res),dtype=int)   # need to force to int type
