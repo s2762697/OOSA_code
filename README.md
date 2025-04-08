@@ -24,7 +24,7 @@ This library uses the raw Land, Vegetetaion and Ice Sensor (LVIS) data ([link](h
 ```
 -	**source:** Contains multiple files that are required to complete the specified tasks.
 -	**static:** A folder where the images for the readme are stored. 
--	**TasksX** run each specifed task.
+-	**Tasks:** run each specifed task or a component of it.
 -	README file.
 
 When the tasks are run, additonal folders are created:
@@ -88,7 +88,9 @@ This will display the following output:
 **Task 3:**
 
 task3folderloop = *Don't run* this file as it is massive.
+
 task3bound = The bounds are working for a chosen .h5 file.
+
 task3attempt = Attempt to combine - runs but doesnt produce an appropriate output.
 
 To run:
