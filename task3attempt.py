@@ -1,4 +1,4 @@
-'''TASK3 - looping through all files to create DEM raster'''
+'''TASK3 - looping through all files and using bounds to create DEM raster'''
 # import libraries
 import os
 import argparse
@@ -20,7 +20,6 @@ def chooseArg():
     
     Command Line Args:
         --i = optional = index of wavefrom
-        -f = required = path to LVIS HDF5 file
         --o = optional = output tiff file
         --res = optional = resolution for raster
     
