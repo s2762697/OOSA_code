@@ -1,6 +1,6 @@
 ## OOSA Final Assignment.
 
-This library uses the raw Land, Vegetetaion and Ice Sensor (LVIS) data ([link](https://lvis.gsfc.nasa.gov/Data/Data_Download.html)) via _geosnetdata_, from Operation IceBridge to process and create raster DEMs from the 20th October 2009 and 17th October 2015.
+This library uses the raw Land, Vegetetaion and Ice Sensor (LVIS) data ([link](https://lvis.gsfc.nasa.gov/Data/Data_Download.html)) via _geosnetdata_, from Operation IceBridge to process and create raster DEMs from the 20th October 2009 and 17th October 2015. **This repository relies on a connection to netdata.**
 
 **The repository is organised as follows:**
 
@@ -13,8 +13,6 @@ This library uses the raw Land, Vegetetaion and Ice Sensor (LVIS) data ([link](h
 │── static/
 │   │── task1_image.png
 │   │── task2_image.png
-│   │── 
-│── Outputs/
 │── task1.py
 │── task2.py
 │── task3attempt.py
@@ -24,12 +22,15 @@ This library uses the raw Land, Vegetetaion and Ice Sensor (LVIS) data ([link](h
 │── task5.py?
 │── README.md
 ```
--	**Source:** Contains multiple files that are required to complete the specified tasks.
--	**Data2009:** A folder where the 2009 tiled rasters are stored when being processed.
--	**Data 2015:** A folder where the 2015 tiled rasters are stored when being processed.
--	**Outputs:** A folder where the final outputs are stored. This includes the waveform.png, single file DEM and full DEMs for both 2009 and 2015.
+-	**source:** Contains multiple files that are required to complete the specified tasks.
+-	**static:** A folder where the images for the readme are stored. 
 -	**TasksX** run each specifed task.
 -	README file.
+
+When the tasks are run, additonal folders are created:
+-    **Outputs/** stores final .tif and .png outputs.
+-   **Data2009/** stores temporary files.
+
 -----
 ### Libraries Required: 
 The follwowing libraries are required for the scripts to run:
@@ -51,10 +52,12 @@ Incase any of the libraries need to be installed:
 -----------
 ### Running The Code:
 **Install the github repo**
+
 To clone the repository:
 ```
     git clone git@github.com:s2762697/OOSA_code.git
 ```
+
 **Task 1:**
 
 To run:
@@ -84,8 +87,8 @@ This will display the following output:
 
 **Task 3:**
 
-task3folderloop = *Don't run* this file as it is massive
-task3bound = The bounds are working for a chosen .h5 file
+task3folderloop = *Don't run* this file as it is massive.
+task3bound = The bounds are working for a chosen .h5 file.
 task3attempt = Attempt to combine - runs but doesnt produce an appropriate output.
 
 To run:
@@ -96,7 +99,7 @@ To run:
 
 **Task 4:**
 
-Pseudo code is provided for this task and would use a function called fill gaps from rasterio.
+Pseudo code is provided for this task and would use a function called fill_gaps from rasterio.
 The script currently has bugs and cannot identify the areas of no data.
 
 **Task 5:**
