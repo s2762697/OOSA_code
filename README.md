@@ -5,8 +5,6 @@ This library uses the raw Land, Vegetetaion and Ice Sensor (LVIS) data ([link](h
 **The repository is organised as follows:**
 
 ```
-│── DATA 2009/
-│── Data2015/
 │── source/
 │   │── lvisClass.py
 │   │── lvisTiff.py
@@ -19,9 +17,10 @@ This library uses the raw Land, Vegetetaion and Ice Sensor (LVIS) data ([link](h
 │── Outputs/
 │── task1.py
 │── task2.py
-│── task3boundattempt.py
+│── task3attempt.py
+│── task3bound.py
 │── task3folderloop.py
-│── task4.py?
+│── task4.py
 │── task5.py?
 │── README.md
 ```
@@ -83,10 +82,22 @@ This will display the following output:
 
 ![Alt text](static/task2_image.png)
 
-
 **Task 3:**
 
+task3folderloop = *Don't run* this file as it is massive
+task3bound = The bounds are working for a chosen .h5 file
+task3attempt = Attempt to combine - runs but doesnt produce an appropriate output.
+
+To run:
+```
+    python task3boundspy -f /geos/netdata/oosa/assignment/lvis/2009/ILVIS1B_AQ2009_1020_R1408_058456.h5 --res 30 --o 'Example.tif'
+
+```
+
 **Task 4:**
+
+Pseudo code is provided for this task and would use a function called fill gaps from rasterio.
+The script currently has bugs and cannot identify the areas of no data.
 
 **Task 5:**
 
