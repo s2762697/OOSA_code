@@ -3,7 +3,8 @@
 '''pseudo-code for gap-filling but would be in lvisTiff
 
 define function named fill_gaps where arg is the raster file path
-    read the raster (rasterio?) - https://rasterio.readthedocs.io/en/latest/api/rasterio.fill.html 
+    read first band of the raster with rasterio 
+    use modeule rasterio.fill - https://rasterio.readthedocs.io/en/latest/api/rasterio.fill.html 
     identify gaps - NaN values
     fill gaps with interpolation (nearest neighbour)
     write the modified raster to file
