@@ -2,12 +2,12 @@
 
 '''pseudo-code for calculating change functions
 
-arg parser for output name 
+arg parser for file inputs and output name 
 
-define elev change
+define elev change (masked inputs)
     boundedDEM2009 - boundedDEM2015
 
-define calc_volume 
+define calc_volume (masked elev change)
     get meta data on pixel size
     elevation difference * pixel area
     print total volume change (convert from m3 to km3)
