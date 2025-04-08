@@ -18,8 +18,6 @@ def chooseArg():
     '''Method to pick arguements from command line
     
     Command Line Args:
-        --i = optional = index of wavefrom
-        -f = required = path to LVIS HDF5 file
         --o = optional = output tiff file
         --res = optional = resolution for raster
     
@@ -28,10 +26,8 @@ def chooseArg():
 
     # create argparse object
     parser = argparse.ArgumentParser(description='Choose processing options')
-    # filename compulsory  
-    #parser.add_argument('-f', type=str, required=True, help='Path to the LVIS HDF5 file')
     # merged DEM tiff name
-    parser.add_argument('--o', type=str, default='2009_DEMbounded.tif', help='Name ' \
+    parser.add_argument('--o', type=str, default='full2009_DEM.tif', help='Name ' \
                             'of output TIFF file')
     # resolution for raster
     parser.add_argument('--res', type=int, default=30, help='Resolution for DEM')
@@ -68,6 +64,7 @@ command = chooseArg()
 
 # for looping through all files
 filelist_2009 = glob('/geos/netdata/oosa/assignment/lvis/2009/*.h5')  #only.h5 files
+#filelist_2015 = glob('/geos/netdata/oosa/assignment/lvis/2015/*.h5')  #only.h5 files
 #print(filelist_2009)   # check
 
 for filename in filelist_2009:
