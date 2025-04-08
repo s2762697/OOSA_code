@@ -106,7 +106,9 @@ The script currently has bugs and cannot identify the areas of no data.
 
 **Task 5:**
 
+Pseudo code is provided for this task and would create a class which includes the functions:
+-   elevation change
+-   calculate volume
+-   quanitfy change
 
-----------------
-References:!?
-
+This code is run with Python 3.11.9
